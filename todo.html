@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List</title>
+  
+  <!-- FullCalender -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.0.0/main.min.css">
+  <script src="./moment/moment.js"></script>
+  <script src="./jQuery/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.0.0/main.min.js"></script>
+  
+  <link rel="stylesheet" href="todo.css">
+  <!-- 使用 小日曆jQuery -->
+  <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/themes/hot-sneaks/jquery-ui.css" rel="stylesheet">  
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+  
+  <!-- 使用 小日曆jQuery Datepicker的中文化-->
+  <!-- <script type="text/javascript" src="../jquery/jquery.ui.datepicker-zh-TW.js"></script><a name="more"></a>
+  <span style="font-family: Times New Roman;"><span style="white-space: normal;">
+    </span></span> -->
+  
+  <!-- bootstrap -->
+  <link href='https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.css' rel='stylesheet' />
+  <link href='https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.1/css/all.css' rel='stylesheet'>
+  <!-- fontawesome -->
+  <script src="https://kit.fontawesome.com/9753721a09.js" crossorigin="anonymous"></script>
+  <!-- googleFont -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="menu-all-list">
+      <div class="menu">
+        <i class="fas fa-bars fa-lg close-menu"></i>
+      </div>
+
+      <div class="menu-lists">
+        <div class="menu-list">
+          <a href="#">日檢視</a>
+        </div>
+        <div class="menu-list">
+          <a href="#">週檢視</a>
+        </div>
+        <div class="menu-list">
+          <a href="#">月檢視</a>
+        </div>
+        <div class="menu-list">
+          <a href="#">色彩檢視</a>
+        </div>
+        <div class="menu-list">
+          <a href="#">標籤檢視</a>
+        </div>
+      </div>
+      
+    </div>
+    <div class="nav">
+      <div class="menu ">
+        <i class="fas fa-bars fa-lg open-menu"></i>
+      </div>
+      <div class="todo-title">
+        TODO LIST
+      </div>
+      
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-orange" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" >今日進度 : 75%</div>
+      </div>
+      
+      <div class="add-button">
+        <i class="fas fa-plus-circle fa-lg"></i>
+      </div>
+    </div >
+  </header>
+
+
+  <div class="content">
+
+    <section class="section-left">
+      <div class="small-calendar-input">
+        <input type='text' name='whenToSet' id="dateChooser" placeholder="請選擇日期...">
+      </div>
+      
+      
+    </section>
+
+    <section class="section-right">
+        <div class="todo-list">
+          <div class="date">
+            <span>Date : </span>
+            <div>
+              <input type="text" id="alternate" size="25" disabled>
+            </div>
+          </div>
+          <div class="form-inline">
+            <input type="text" placeholder="add todo..." id="newTodo" size="55" class="form-control">
+            <button id="addBtn" class="btn btn-info">Add</button>
+          </div>
+          <div class="todo">
+            <ul id="my-todo" class="list-unstyled">
+          
+            <!-- display todos here -->
+          
+          </ul>
+          </div>
+          
+          <div class="Done">
+            <h5>Done</h5>
+            <ul id="my-done" class="list-unstyled">
+              <!-- display dones here -->
+          
+            </ul>
+          </div>
+        </div>
+    </section>
+  </div>
+  
+  
+  
+  
+  <script src="todo.js"></script>
+</body>
+</html>

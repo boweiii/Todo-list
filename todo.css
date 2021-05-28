@@ -1,0 +1,202 @@
+* {
+  font-family: "Lato", "Noto Sans TC", sans-serif;
+}
+html body {
+  background-color: rgb(54, 54, 54);
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(59, 49, 143);
+  height: 45px;
+  box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.75);
+  position: fixed;
+  width: 100vw;
+  top: 0;
+}
+.todo-title {
+  position: absolute;
+  left: 45%;
+  font-weight: 700;
+  font-size: 22px;
+  color: rgb(233, 233, 233);
+  text-shadow: 6px 6px 8px rgba(0, 0, 0, 0.75);
+}
+.progress {
+  position: absolute;
+  width: 300px;
+  left: 60%;
+}
+.progress-bar {
+  width: 75%;
+}
+.add-button {
+  margin-right: 27px;
+  color: #fff;
+  cursor: pointer;
+}
+.menu {
+  margin-left: 27px;
+  color: #fff;
+  cursor: pointer;
+}
+.menu-all-list {
+  /* outline: 1px solid green; */
+  width: 300px;
+  height: 100vh;
+  position: fixed;
+  left: -300px;
+  top: 0;
+  z-index: 999;
+  background-color: rgba(82, 60, 145, 0.95);
+}
+.menu-lists {
+  margin-top: 10px;
+  border-top: 1px solid #ccc;
+}
+.menu-all-list .menu {
+  margin-top: 10.5px;
+  /* outline: 1px solid purple; */
+}
+.menu-list {
+  border-bottom: 1px solid #ccc;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu-list a {
+  color: #ccc;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 400ms linear;
+}
+.menu-list a:hover {
+  text-decoration: none;
+  color: yellow;
+}
+
+/* ***********************content************************* */
+.content {
+  display: flex;
+  margin: 70px 10px 0;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.section-left {
+  width: 25%;
+  text-align: center;
+  border-right: 1px solid rgb(95, 95, 95);
+}
+.section-right {
+  width: 75%;
+  padding-left: 50px;
+}
+#dateChooser {
+  margin-top: 15px;
+}
+/* **********************todo list************************ */
+.date {
+  display: flex;
+  align-items: center;
+}
+#alternate {
+  background-color: #f2f3f5;
+  border: 1px solid #ccd0d5;
+  border-radius: 16px;
+  /* display: flex; */
+  /* align-items: center; */
+  /* cursor: text; */
+  width: 100%;
+  /* flex: 1 1 auto; */
+  /* line-height: 16px; */
+  padding: 7px 12px;
+}
+span {
+  display: inline-block;
+  font-size: 25px;
+  margin-right: 5px;
+  padding-bottom: 5px;
+}
+.todo-list {
+  margin-top: 10px;
+  height: 800px;
+}
+.form-inline {
+  margin-top: 15px;
+}
+#my-todo {
+  max-height: 350px;
+  overflow: hidden;
+  overflow-y: scroll;
+  border-top: 1px solid rgb(218, 218, 218);
+  width: 90%;
+  margin-top: 20px;
+}
+#my-done {
+  max-height: 250px;
+  overflow: hidden;
+  overflow-y: scroll;
+  border-top: 1px solid rgb(218, 218, 218);
+  width: 90%;
+  margin-top: 20px;
+}
+#my-todo li,
+#my-done li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-right: 1px solid rgb(218, 218, 218);
+  border-left: 1px solid rgb(218, 218, 218);
+  border-bottom: 1px solid rgb(218, 218, 218);
+  padding: 4px;
+  transition: box-shadow 130ms linear;
+}
+#my-todo li:hover {
+  box-shadow: 0px 1px 5px -2px rgba(0, 0, 0, 0.64);
+}
+#my-done li:hover {
+  box-shadow: 0px 1px 5px -2px rgba(0, 0, 0, 0.64);
+}
+#my-todo li span,
+#my-done li span {
+  font-size: 17px;
+  /* outline: 1px solid blue; */
+  line-height: 26px;
+  height: 26px;
+}
+.fa-trash {
+  cursor: pointer;
+}
+.checked {
+  color: #ccc;
+  text-decoration: line-through;
+  font-style: italic;
+}
+
+.fa-trash {
+  color: #bbb;
+}
+/* *******************************************scroll bar********************************** */
+/* this targets the default scrollbar (compulsory) */
+::-webkit-scrollbar {
+  width: 15px;
+}
+/* the new scrollbar will have a flat appearance with the set background color */
+::-webkit-scrollbar-track {
+  background-color: #b46868;
+}
+/* this will style the thumb, ignoring the track */
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+/* optionally, you can style the top and the bottom buttons (left and right for horizontal bars) */
+::-webkit-scrollbar-button {
+  background-color: #7c2929;
+}
+/* if both the vertical and the horizontal bars appear, then perhaps the right bottom corner also needs to be styled */
+::-webkit-scrollbar-corner {
+  background-color: black;
+}
